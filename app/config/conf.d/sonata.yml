@@ -12,9 +12,9 @@ sonata_admin:
     templates:
         # default global templates
         ajax:    SonataAdminBundle::ajax_layout.html.twig
-
-        layout:  AcmeMainBundle::SonataAdmin/standard_layout.html.twig
-
+        layout:  AcmeMainBundle::Admin/standard_layout.html.twig
+        user_block: AcmeMainBundle:Admin:admin_topnav.html.twig
+        
     dashboard:
         blocks:
             # display a dashboard block
@@ -42,3 +42,4 @@ sonata_doctrine_phpcr_admin:
         Symfony\Cmf\Bundle\MenuBundle\Doctrine\Phpcr\MenuNode:
             valid_children:
                 - Symfony\Cmf\Bundle\MenuBundle\Doctrine\Phpcr\MenuNode
+        
