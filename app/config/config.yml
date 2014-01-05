@@ -60,9 +60,14 @@ doctrine_phpcr:
         auto_generate_proxy_classes: %kernel.debug%
         locales:
             en:
+                - fr
+                - de
+            fr:
+                - en
                 - de
             de:
                 - en
+                - fr
 
 liip_doctrine_cache:
     namespaces:
@@ -104,5 +109,5 @@ lunetics_locale:
 
 
 
-fos_js_routing:
-    routes_to_expose: [ _cmf_tree_phpcr_odm_tree_children ]
+#fos_js_routing:
+#    routes_to_expose: [ _cmf_tree_phpcr_odm_tree_children ]

@@ -3,12 +3,14 @@ static:
         label:
             en: "Website"
             de: "Webseite"
+            fr: "Site Web"
         uri: "http://cmf.symfony.com"
 
     demo_redirect:
         label:
             en: "Demo"
             de: "Demo"
+            fr: "Demo"
         route: "demo"
         uri: "http://cmf.liip.ch"
 
@@ -16,10 +18,12 @@ static:
         label:
             en: "Dynamic"
             de: "Dynamisch"
+            fr: "Dynamique"
         route: "dynamic"
 
     hardcoded_static:
         label:
             en: "Static"
             de: "Statisch"
+            fr: "Statique"
         uri: "static"
