@@ -1,0 +1,44 @@
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        sonata_admin_doctrine_phpcr.tree_block:
+            settings:
+                id: '/cms'
+            contexts:   [admin]
+
+sonata_admin:
+    templates:
+        # default global templates
+        ajax:    SonataAdminBundle::ajax_layout.html.twig
+
+        layout:  AcmeMainBundle::SonataAdmin/standard_layout.html.twig
+
+    dashboard:
+        blocks:
+            # display a dashboard block
+            - { position: right, type: sonata.admin.block.admin_list }
+            - { position: left, type: sonata_admin_doctrine_phpcr.tree_block }
+
+sonata_doctrine_phpcr_admin:
+    document_tree:
+        Doctrine\ODM\PHPCR\Document\Generic:
+            valid_children:
+                - all
+        # if you are using the SimpleCmsBundle, enable the Page as well
+        Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page:
+            valid_children:
+                - all
+        Symfony\Cmf\Bundle\ContentBundle\Doctrine\Phpcr\StaticContent:
+            valid_children:
+                - all
+        Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Phpcr\Route:
+            valid_children:
+                - Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Phpcr\Route
+                - Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Phpcr\RedirectRoute
+        Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Phpcr\RedirectRoute:
+            valid_children: []
+        Symfony\Cmf\Bundle\MenuBundle\Doctrine\Phpcr\MenuNode:
+            valid_children:
+                - Symfony\Cmf\Bundle\MenuBundle\Doctrine\Phpcr\MenuNode

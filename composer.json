@@ -30,7 +30,9 @@
         "liip/doctrine-cache-bundle": "1.0.*",
         "incenteev/composer-parameter-handler": "~2.0",
         "liip/imagine-bundle": "~0.12",
-        "wjzijderveld/check-bundles": "1.0.*@dev"
+        "wjzijderveld/check-bundles": "1.0.*@dev",
+        "sonata-project/doctrine-phpcr-admin-bundle": "1.0.*",
+        "sonata-project/core-bundle": "~2.2@dev"
     },
     "require-dev": {
         "liip/functional-test-bundle": "1.0.*"

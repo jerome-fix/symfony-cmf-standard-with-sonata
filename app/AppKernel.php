@@ -14,6 +14,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
 
             new Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
             new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
@@ -31,6 +32,15 @@ class AppKernel extends Kernel
             new Symfony\Cmf\Bundle\SimpleCmsBundle\CmfSimpleCmsBundle(),
             new Symfony\Cmf\Bundle\MediaBundle\CmfMediaBundle(),
             new Symfony\Cmf\Bundle\CreateBundle\CmfCreateBundle(),
+
+            // support for the admin
+            new Symfony\Cmf\Bundle\TreeBrowserBundle\CmfTreeBrowserBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\DoctrinePHPCRAdminBundle\SonataDoctrinePHPCRAdminBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
             // and the sandbox bundle
             new Acme\MainBundle\AcmeMainBundle(),
