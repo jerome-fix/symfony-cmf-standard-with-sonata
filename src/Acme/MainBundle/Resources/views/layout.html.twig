@@ -71,8 +71,9 @@
     </div>
 </div>
 
-{#{% render controller("cmf_create.jsloader.controller:includeJSFilesAction", {'_locale': app.request.locale}) %}#}
-
+{% if is_granted('ROLE_ADMIN') %}
+    {% render controller("cmf_create.jsloader.controller:includeJSFilesAction", {'_locale': app.request.locale}) %}
+{% endif %}
 </body>
 </html>
 
